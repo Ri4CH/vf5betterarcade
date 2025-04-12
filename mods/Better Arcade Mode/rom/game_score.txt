@@ -1,0 +1,377 @@
+// ゲームバージョン
+version=6.000
+
+
+#-----------------------------
+# キャラ-ステージ対応
+#
+# name : キャラ
+# stage : ステージ
+#-----------------------------
+
+score.chara.0.name=AKI
+score.chara.0.stage=STGDJO
+
+score.chara.1.name=SAR
+score.chara.1.stage=STGAUR
+
+score.chara.2.name=LAU
+score.chara.2.stage=STGBAN
+
+score.chara.3.name=SHU
+score.chara.3.stage=STGRIV
+
+score.chara.4.name=JEF
+score.chara.4.stage=STGUMI
+
+score.chara.5.name=PAI
+score.chara.5.stage=STGTAN
+
+score.chara.6.name=JAK
+score.chara.6.stage=STGNYC
+
+score.chara.7.name=KAG
+score.chara.7.stage=STGTER
+
+score.chara.8.name=LIO
+score.chara.8.stage=STGCAS
+
+score.chara.9.name=WOL
+score.chara.9.stage=STGYUK
+
+score.chara.10.name=AOI
+score.chara.10.stage=STGJIN
+
+score.chara.11.name=LEI
+score.chara.11.stage=STGSIN
+
+score.chara.12.name=VAN
+score.chara.12.stage=STGTAK
+
+score.chara.13.name=BRA
+score.chara.13.stage=STGBAR
+
+score.chara.14.name=GOH
+score.chara.14.stage=STGHAI
+
+score.chara.15.name=MON
+score.chara.15.stage=STGSLK
+
+score.chara.16.name=MSK
+score.chara.16.stage=STGARE
+
+score.chara.17.name=KRT
+score.chara.17.stage=STGGYM
+
+score.chara.18.name=TAK
+score.chara.18.stage=STGSMO
+
+score.chara.19.name=TE2
+score.chara.19.stage=STGTS3
+
+score.chara.20.name=DUR
+score.chara.20.stage=STGDU1
+
+score.chara.length=21
+
+
+
+#-----------------------------
+# ルート
+#-----------------------------
+
+# ルートA
+score.route.0.enemy0.name=JAK
+score.route.0.enemy1.name=SAR
+score.route.0.enemy2.name=LAU
+score.route.0.enemy3.name=SHU
+score.route.0.enemy4.name=MON
+score.route.0.enemy5.name=AKI
+score.route.0.enemy6.name=PAI
+score.route.0.enemy7.name=DUR
+
+# ルートB
+score.route.1.enemy0.name=KAG
+score.route.1.enemy1.name=KRT
+score.route.1.enemy2.name=GOH
+score.route.1.enemy3.name=TAK
+score.route.1.enemy4.name=LIO
+score.route.1.enemy5.name=MSK
+score.route.1.enemy6.name=BRA
+score.route.1.enemy7.name=DUR
+
+# ルートC
+score.route.2.enemy0.name=JEF
+score.route.2.enemy1.name=AOI
+score.route.2.enemy2.name=VAN
+score.route.2.enemy3.name=TE2
+score.route.2.enemy4.name=WOL
+score.route.2.enemy5.name=LEI
+score.route.2.enemy6.name=JAK
+score.route.2.enemy7.name=DUR
+
+score.route.length=3
+
+
+
+#-----------------------------
+# 難易度設定(0〜31)
+#-----------------------------
+
+# VERY_EASY
+score.difficulty.0.stage0.param=10
+score.difficulty.0.stage1.param=10
+score.difficulty.0.stage2.param=10
+score.difficulty.0.stage3.param=10
+score.difficulty.0.stage4.param=10
+score.difficulty.0.stage5.param=10
+score.difficulty.0.stage6.param=10
+score.difficulty.0.stage7.param=10
+
+# EASY
+score.difficulty.1.stage0.param=15
+score.difficulty.1.stage1.param=15
+score.difficulty.1.stage2.param=15
+score.difficulty.1.stage3.param=15
+score.difficulty.1.stage4.param=15
+score.difficulty.1.stage5.param=15
+score.difficulty.1.stage6.param=15
+score.difficulty.1.stage7.param=15
+
+# NORMAL
+score.difficulty.2.stage0.param=20
+score.difficulty.2.stage1.param=20
+score.difficulty.2.stage2.param=20
+score.difficulty.2.stage3.param=20
+score.difficulty.2.stage4.param=20
+score.difficulty.2.stage5.param=20
+score.difficulty.2.stage6.param=20
+score.difficulty.2.stage7.param=20
+
+# HARD
+score.difficulty.3.stage0.param=25
+score.difficulty.3.stage1.param=25
+score.difficulty.3.stage2.param=25
+score.difficulty.3.stage3.param=25
+score.difficulty.3.stage4.param=25
+score.difficulty.3.stage5.param=25
+score.difficulty.3.stage6.param=25
+score.difficulty.3.stage7.param=25
+
+# VERY HARD
+score.difficulty.4.stage0.param=31
+score.difficulty.4.stage1.param=31
+score.difficulty.4.stage2.param=31
+score.difficulty.4.stage3.param=31
+score.difficulty.4.stage4.param=31
+score.difficulty.4.stage5.param=31
+score.difficulty.4.stage6.param=31
+score.difficulty.4.stage7.param=31
+
+score.difficulty.length=5
+
+
+
+#-----------------------------
+# スコア基準
+#-----------------------------
+
+# ダメージスコア
+score.formula.damage.0.thre=0
+score.formula.damage.1.thre=11
+score.formula.damage.2.thre=16
+score.formula.damage.3.thre=21
+score.formula.damage.4.thre=26
+score.formula.damage.5.thre=31
+score.formula.damage.6.thre=36
+score.formula.damage.7.thre=41
+score.formula.damage.8.thre=46
+score.formula.damage.9.thre=51
+
+score.formula.damage.0.score=300
+score.formula.damage.1.score=600
+score.formula.damage.2.score=900
+score.formula.damage.3.score=1200
+score.formula.damage.4.score=1500
+score.formula.damage.5.score=2000
+score.formula.damage.6.score=2500
+score.formula.damage.7.score=3000
+score.formula.damage.8.score=3500
+score.formula.damage.9.score=4500
+
+score.formula.damage.length=10
+
+
+# コンボ
+score.formula.combo.normal.score=200
+score.formula.combo.side.score=500
+
+score.formula.combo.damage.0.thre=41
+score.formula.combo.damage.1.thre=51
+score.formula.combo.damage.2.thre=61
+score.formula.combo.damage.3.thre=71
+score.formula.combo.damage.4.thre=81
+score.formula.combo.damage.5.thre=91
+
+score.formula.combo.damage.0.score=3000
+score.formula.combo.damage.1.score=3500
+score.formula.combo.damage.2.score=4000
+score.formula.combo.damage.3.score=5000
+score.formula.combo.damage.4.score=6500
+score.formula.combo.damage.5.score=8000
+
+score.formula.combo.damage.length=6
+
+
+score.formula.combo.color.0.thre=0
+score.formula.combo.color.1.thre=3600
+score.formula.combo.color.2.thre=5000
+
+score.formula.combo.color.0.color=white
+score.formula.combo.color.1.color=orange
+score.formula.combo.color.2.color=green
+
+score.formula.combo.color.length=3
+
+
+
+# First Attack
+score.formula.first.score=10000
+
+score.formula.first.color=white
+
+
+# Special Finish(規定技KO)
+#
+#  base + (stage<1-7> -1 ) * add
+#
+score.formula.special.score.base=3000
+score.formula.special.score.add=2000
+
+score.formula.special.color.0.thre=0
+score.formula.special.color.1.thre=7000
+score.formula.special.color.2.thre=13000
+
+score.formula.special.color.0.color=white
+score.formula.special.color.1.color=orange
+score.formula.special.color.2.color=green
+
+score.formula.special.color.length=3
+
+
+# リングアウト
+#
+# threshold:score1とscore2の境界となる相手と自分の体力差(en - my)
+# score1:通常時
+# score2:相手の体力が自分よりも threshold以上あった場合
+#
+score.formula.ringout.threshold=100
+score.formula.ringout.score1=1000
+score.formula.ringout.score2=3000
+
+score.formula.ringout.color=white
+
+
+# 残りタイム
+#
+# time / rate * add
+#
+score.formula.time.rate=1
+score.formula.time.add=400
+
+score.formula.time.color.0.thre=0
+score.formula.time.color.0.color=white
+score.formula.time.color.1.thre=6400
+score.formula.time.color.1.color=orange
+score.formula.time.color.2.thre=12000
+score.formula.time.color.2.color=green
+score.formula.time.color.length=3
+
+
+# 体力
+#
+# 通常時: energy / rate * add
+# エクセレント時: excellent
+#
+score.formula.energy.rate=10
+score.formula.energy.add=300
+score.formula.energy.excellent=20000
+
+score.formula.energy.color.0.thre=0
+score.formula.energy.color.0.color=white
+score.formula.energy.color.1.thre=3000
+score.formula.energy.color.1.color=orange
+score.formula.energy.color.2.thre=5700
+score.formula.energy.color.2.color=green
+score.formula.energy.color.length=3
+
+
+# 連続勝利ラウンド数
+#
+# add: 1ラウンド勝利当たりのボーナス
+# limit:ボーナスの上限
+#
+# round * add <= limit
+#
+score.formula.round.add=6000
+score.formula.round.limit=60000
+
+score.formula.round.color.0.thre=0
+score.formula.round.color.0.color=white
+score.formula.round.color.1.thre=18000
+score.formula.round.color.1.color=orange
+score.formula.round.color.2.thre=54000
+score.formula.round.color.2.color=green
+score.formula.round.color.length=3
+
+
+#-----------------------------
+# 報酬(幻球のかけら)
+#-----------------------------
+
+# ステージクリア報酬
+# stage0:STAGE 1
+# stage1:STAGE 2
+# stage2:STAGE 3
+# stage3:STAGE 4
+# stage4:STAGE 5
+# stage5:STAGE 6
+# stage6:FINAL STAGE
+# stage7:BONUS STAGE
+score.reward.stage0.medal=40
+score.reward.stage1.medal=40
+score.reward.stage2.medal=60
+score.reward.stage3.medal=60
+score.reward.stage4.medal=60
+score.reward.stage5.medal=60
+score.reward.stage6.medal=80
+score.reward.stage7.medal=0
+
+# スコア報酬(ラウンド数設定別)
+# round0:2本先取
+# round1:3本先取
+# round2:4本先取
+# round3:5本先取
+score.reward.score.0.medal=50
+score.reward.score.0.round0.thre=0
+score.reward.score.0.round1.thre=0
+score.reward.score.0.round2.thre=0
+score.reward.score.0.round3.thre=0
+
+score.reward.score.1.medal=300
+score.reward.score.1.round0.thre=800000
+score.reward.score.1.round1.thre=1200000
+score.reward.score.1.round2.thre=1550000
+score.reward.score.1.round3.thre=1900000
+
+score.reward.score.2.medal=600
+score.reward.score.2.round0.thre=1370000
+score.reward.score.2.round1.thre=1900000
+score.reward.score.2.round2.thre=2460000
+score.reward.score.2.round3.thre=2980000
+
+score.reward.score.length=3
+
+
+
+/* EOF */
