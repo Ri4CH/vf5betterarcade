@@ -1,3 +1,5 @@
+Makes the Arcade mode of Virtua Fighter 5 R.E.V.O. a bit better.
+
 Randomizes the stages NOT for Dural, makes the arcade more difficult and set this difficulty for all stages.
 Just put everything to your VF5 folder and enable the mod with ShinRyuModManager.
 
