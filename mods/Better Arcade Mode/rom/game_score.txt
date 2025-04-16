@@ -81,32 +81,32 @@ score.chara.length=21
 #-----------------------------
 
 # ルートA
-score.route.0.enemy0.name=JAK
-score.route.0.enemy1.name=SAR
-score.route.0.enemy2.name=LAU
-score.route.0.enemy3.name=SHU
-score.route.0.enemy4.name=MON
-score.route.0.enemy5.name=AKI
-score.route.0.enemy6.name=PAI
+score.route.0.enemy0.name=MON
+score.route.0.enemy1.name=KAG
+score.route.0.enemy2.name=JAK
+score.route.0.enemy3.name=SAR
+score.route.0.enemy4.name=AOI
+score.route.0.enemy5.name=BRA
+score.route.0.enemy6.name=LIO
 score.route.0.enemy7.name=DUR
 
 # ルートB
-score.route.1.enemy0.name=KAG
-score.route.1.enemy1.name=KRT
-score.route.1.enemy2.name=GOH
-score.route.1.enemy3.name=TAK
-score.route.1.enemy4.name=LIO
-score.route.1.enemy5.name=MSK
-score.route.1.enemy6.name=BRA
+score.route.1.enemy0.name=MSK
+score.route.1.enemy1.name=GOH
+score.route.1.enemy2.name=PAI
+score.route.1.enemy3.name=JEF
+score.route.1.enemy4.name=LEI
+score.route.1.enemy5.name=KRT
+score.route.1.enemy6.name=AKI
 score.route.1.enemy7.name=DUR
 
 # ルートC
-score.route.2.enemy0.name=JEF
-score.route.2.enemy1.name=AOI
-score.route.2.enemy2.name=VAN
-score.route.2.enemy3.name=TE2
-score.route.2.enemy4.name=WOL
-score.route.2.enemy5.name=LEI
+score.route.2.enemy0.name=SHU
+score.route.2.enemy1.name=LAU
+score.route.2.enemy2.name=WOL
+score.route.2.enemy3.name=VAN
+score.route.2.enemy4.name=TAK
+score.route.2.enemy5.name=SHU
 score.route.2.enemy6.name=JAK
 score.route.2.enemy7.name=DUR
 
