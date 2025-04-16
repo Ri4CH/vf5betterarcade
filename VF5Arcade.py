@@ -42,7 +42,7 @@ def main():
             lines = f.readlines()
 
         # Заменяем только строки 82-112 (индексы 81-111)
-        for i in range(81, min(112, len(lines))):
+        for i in range(1, min(112, len(lines))):
             lines[i] = pattern.sub(lambda m: get_replacement(m.group(0)), lines[i])
 
         # Записываем изменения

@@ -9,61 +9,61 @@ version=6.000
 # stage : ステージ
 #-----------------------------
 
-score.chara.0.name=AKI
+score.chara.0.name=KAG
 score.chara.0.stage=STGDJO
 
-score.chara.1.name=SAR
+score.chara.1.name=LIO
 score.chara.1.stage=STGAUR
 
-score.chara.2.name=LAU
+score.chara.2.name=WOL
 score.chara.2.stage=STGBAN
 
-score.chara.3.name=SHU
+score.chara.3.name=MON
 score.chara.3.stage=STGRIV
 
-score.chara.4.name=JEF
+score.chara.4.name=LAU
 score.chara.4.stage=STGUMI
 
-score.chara.5.name=PAI
+score.chara.5.name=AKI
 score.chara.5.stage=STGTAN
 
-score.chara.6.name=JAK
+score.chara.6.name=LEI
 score.chara.6.stage=STGNYC
 
-score.chara.7.name=KAG
+score.chara.7.name=JAK
 score.chara.7.stage=STGTER
 
-score.chara.8.name=LIO
+score.chara.8.name=SAR
 score.chara.8.stage=STGCAS
 
-score.chara.9.name=WOL
+score.chara.9.name=TAK
 score.chara.9.stage=STGYUK
 
-score.chara.10.name=AOI
+score.chara.10.name=GOH
 score.chara.10.stage=STGJIN
 
-score.chara.11.name=LEI
+score.chara.11.name=VAN
 score.chara.11.stage=STGSIN
 
-score.chara.12.name=VAN
+score.chara.12.name=PAI
 score.chara.12.stage=STGTAK
 
-score.chara.13.name=BRA
+score.chara.13.name=MSK
 score.chara.13.stage=STGBAR
 
-score.chara.14.name=GOH
+score.chara.14.name=KRT
 score.chara.14.stage=STGHAI
 
-score.chara.15.name=MON
+score.chara.15.name=SHU
 score.chara.15.stage=STGSLK
 
-score.chara.16.name=MSK
+score.chara.16.name=AOI
 score.chara.16.stage=STGARE
 
-score.chara.17.name=KRT
+score.chara.17.name=JEF
 score.chara.17.stage=STGGYM
 
-score.chara.18.name=TAK
+score.chara.18.name=BRA
 score.chara.18.stage=STGSMO
 
 score.chara.19.name=TE2
