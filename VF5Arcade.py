@@ -1,55 +1,96 @@
-import random
-import re
 import os
-import subprocess
 import sys
+import random
+from pathlib import Path
 
 
-def randomize_names():
-    original_words = ['AKI', 'SAR', 'LAU', 'SHU', 'JEF', 'PAI', 'JAK', 'KAG', 'LIO', 'WOL', 'AOI', 'LEI', 'VAN', 'BRA',
-                      'GOH', 'MON', 'MSK', 'KRT', 'TAK']
-    randomized_words = original_words.copy()
-    random.shuffle(randomized_words)
+def get_base_path():
+    """Определяет правильный базовый путь для EXE и скрипта."""
+    if getattr(sys, 'frozen', False):
+        # Если программа 'заморожена' (скомпилирована в EXE)
+        return Path(sys.executable).parent
+    else:
+        # Обычный режим (запуск как скрипт)
+        return Path(__file__).parent
 
-    file_path = os.path.join('mods', 'Better Arcade Mode', 'rom', 'game_score.txt')
 
+# Исходный список слов
+original_words = ['AKI', 'SAR', 'LAU', 'SHU', 'JEF', 'PAI', 'JAK', 'KAG', 'LIO', 'WOL', 'AOI', 'LEI', 'VAN', 'BRA',
+                  'GOH', 'MON', 'MSK', 'KRT', 'TAK']
+
+
+def randomize_words():
+    randomized = original_words.copy()
+    random.shuffle(randomized)
+    return randomized
+
+
+def process_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             content = file.read()
+    except FileNotFoundError:
+        print(f"Ошибка: Файл не найден: {file_path}")
+        return
 
-        words_and_nonwords = re.split(r'(\W+)', content)
+    words = []
+    current_word = ''
+    for char in content:
+        if char.isalnum() or char == '_':
+            current_word += char
+        else:
+            if current_word:
+                words.append(current_word)
+                current_word = ''
+            words.append(char)
 
-        current_index = 0
-        for i, token in enumerate(words_and_nonwords):
-            if token.isalpha() and token in original_words:
-                replacement = randomized_words[current_index % len(randomized_words)]
-                words_and_nonwords[i] = replacement
-                current_index += 1
+    if current_word:
+        words.append(current_word)
 
-        new_content = ''.join(words_and_nonwords)
+    randomized_words = randomize_words()
+    current_index = 0
 
+    processed_words = []
+    for word in words:
+        if word in original_words:
+            replacement = randomized_words[current_index]
+            processed_words.append(replacement)
+            current_index += 1
+            if current_index >= len(randomized_words):
+                randomized_words = randomize_words()
+                current_index = 0
+        else:
+            processed_words.append(word)
+
+    new_content = ''.join(processed_words)
+
+    try:
         with open(file_path, 'w', encoding='utf-8') as file:
             file.write(new_content)
-
-        print("New order:")
-        print(randomized_words)
-        return True
-    except Exception as e:
-        print(f"Error in file: {e}")
-        return False
+    except PermissionError:
+        print(f"Ошибка: Нет прав на запись в файл: {file_path}")
 
 
 def main():
-    if randomize_names():
-        exe_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-        exe_path = os.path.join(exe_dir, "VFREVO.exe")
+    base_path = get_base_path()
 
-        try:
-            subprocess.Popen([exe_path], creationflags=subprocess.CREATE_NO_WINDOW)
-            print(f"Launched {exe_path}")
-        except Exception as e:
-            print(f"error while launching VFREVO.exe: {e}")
+    # Путь к файлу game_score.txt
+    file_path = base_path / 'mods' / 'Better Arcade Mode' / 'rom' / 'game_score.txt'
+
+    if file_path.exists():
+        process_file(file_path)
+    else:
+        print(f"Файл не найден: {file_path}")
+        print("Убедитесь, что EXE лежит в той же папке, где находится VFREVO.exe")
+
+    # Путь к VFREVO.exe
+    exe_path = base_path / 'VFREVO.exe'
+    import subprocess
+    if exe_path.exists():
+        subprocess.Popen([exe_path], shell=True)  # Запускает без ожидания
+    else:
+        print(f"Ошибка: VFREVO.exe не найден в {base_path}")
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
